@@ -192,7 +192,7 @@ def send_conmail(email):
 def blog(request):
    
     posts = Blog.objects.all().order_by("-timestamp") 
-    paginator = Paginator(posts,3)
+    paginator = Paginator(posts,9)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request,'blog/blog.html',{'page_obj':page_obj})
@@ -243,12 +243,12 @@ def dashboard(request):
         title = request.POST.get('title')
         desc = request.POST.get('desc') 
         author  = request.POST.get('user_id') 
-        img = request.FILES.get('img')
+        # img = request.FILES.get('img')
     
         author=request.user
         if request.method=='POST': 
             if author is not None:
-                blog = Blog(author =author,img=img ,title=title,desc=desc)
+                blog = Blog(author =author  ,title=title,desc=desc)
                 messages.success(request,"Your Blog is Posted")
                 blog.save()
                 return redirect('dashboard')
@@ -279,12 +279,12 @@ def upd(request,id):
     if request.method=='POST':
         update_title = request.POST.get('update_title')
         update_desc = request.POST.get('update_desc')  
-        img= request.FILES.get('img')
+        # img= request.FILES.get('img')
           
         blog= Blog.objects.get(id=id)
         blog.title = update_title
         blog.desc =update_desc
-        blog.img=img
+        # blog.img=img
         blog.save()
         messages.success(request,"Your Blog is Update Now")
         return redirect('dashboard')

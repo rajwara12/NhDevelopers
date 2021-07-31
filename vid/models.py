@@ -31,7 +31,7 @@ class Blog(models.Model):
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     timestamp=models.DateTimeField(auto_now_add=True)
     desc = models.TextField()
-    img = models.ImageField(upload_to="images")
+    # img = models.ImageField(upload_to="images")
     views = models.IntegerField(default=0)
     def __str__(self) : 
         return self.title + '  by  ' + self.author.username

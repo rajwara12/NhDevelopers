@@ -10,8 +10,8 @@
   <h2 class="display-2 text-center">Add Blog Here....</h2>
 
 <form action="https://nhdevelopersteam.herokuapp.com/dashboard/" method="POST" enctype="multipart/form-data">{% csrf_token %}
-  <p>Upload Image Here....</p>
-  <input type="file" class=" mb-3"  required name="img">
+  <!-- <p>Upload Image Here....</p>
+  <input type="file" class=" mb-3"  required name="img"> -->
     <div class="form-group">
 
       <label for="">Blog Title</label>
@@ -37,7 +37,7 @@
         <div class="col col-lg-4 mb-2">
         <div class="card text-left">
           
-          <img class="img-fluid "   style="width: 100% ; height:200px"  src= '{{i.img.url}}'    >
+          <!-- <img class="img-fluid "   style="width: 100% ; height:200px"  src= '{{i.img.url}}'    > -->
           <div class="card-body">
             <h4 class="card-title"><a href="https://nhdevelopersteam.herokuapp.com/dashboard/det/{{i.id}}" style="text-decoration: none; color: black; " >{{i.title}}</h4></a><span>{{i.timestamp}}</span>
             <p class="card-text">{{i.author}}</p>
