@@ -129,10 +129,10 @@ def change_pass(request, auth_token ):
         user_id = request.POST.get('user_id')
         if user_id is None:
             messages.error(request,"User Not FOUND")
-            return redirect(f'/change_pass/{auth_token}/')
+            return redirect(f' https://nhdevelopersteam.herokuapp.com/change_pass/{auth_token}/')
         if newpass != newpass1:
             messages.error(request,"Password doesnt match")
-            return redirect(f'/change_pass/{auth_token}/')
+            return redirect(f' https://nhdevelopersteam.herokuapp.com/change_pass/{auth_token}/')
         user_obj = User.objects.get(id=user_id)
         print(user_obj)  
         user_obj.set_password(newpass) 
