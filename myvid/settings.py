@@ -134,8 +134,8 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'media/images')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'med')
-MEDIA_URL = '/med/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 MESSAGE_TAGS= {
     messages.ERROR:'danger'
 } 
