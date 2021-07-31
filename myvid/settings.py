@@ -156,6 +156,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'msaadanwaqar@gmail.com'
-EMAIL_HOST_PASSWORD= '03030875744'
+EMAIL_HOST_PASSWORD= 'hupxpufcdvsieava'
 
  
