@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}My Blogs{% endblock title %}
+
+{% block body %}
+ 
+<div class="container" style="margin-top: 40px;  ">
+    <!-- <img class="card-img-top mb-4   " style="width: 100% ; height:auto;" src= '{{blog.img.url}}'    > -->
+    <h1>{{blog.title}}</h2><span>{{blog.timestamp}}</span>
+    <h4>{{blog.author}}</h4>
+    <p>{{blog.desc|safe}}</p>
+    <div>
+        <form action="http://127.0.0.1:8000/dashboard/det/dele/{{blog.id}}" method="post">{% csrf_token %}
+            <div class="form-group">
+                <input type="submit" class="btn btn-lg bg-danger" value="Delete">
+            </form>
+    </div>
+    <hr>
+    <div class="container mt-4">
+        <h2 class="text-center">Update your Blog</h2>
+
+        <form action="http://127.0.0.1:8000/dashboard/det/upd/{{blog.id}}" enctype="multipart/form-data" method="post">{% csrf_token %}
+            <p>Update your Image Here....</p>
+  <input type="file" class=" mb-3" required name="img">
+            <div class="form-group">
+                 
+                <label for="">Blog Title</label>
+                <input type="text" placeholder="Your blog title......" required name="update_title" id="" class="form-control"  aria-describedby="helpId"> 
+                <label for="">Blog Body</label>
+                <textarea type="text" placeholder="Your blog body......" required  name="update_desc" id="mytextarea" class="form-control"  aria-describedby="helpId"> </textarea>
+
+                <input type="hidden" name="blog_upd" value="{{blog.id}}">
+                <input type="submit" class="btn btn-lg bg-danger " style="margin-bottom: 20px; margin-top: 3px;" value="Update">
+            </form>
+    </div>
+
+</div>
+ 
+
+
+
+{% endblock body %}

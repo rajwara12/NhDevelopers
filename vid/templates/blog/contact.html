@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Contact Us{% endblock title %}
+
+
+{% block body %}
+<style>
+  body{
+    background-color: #11333F;
+  }
+</style>
+<div class="container-fluid" style="margin-bottom: 150px;" >
+  <div class="container mt-4 border border-rounded ">
+    <h2 class="display-2 text-center " style="color: white;">Let's talk.....</h2>
+    <h5 style="color: white;">Get in touch via the form below, or by emailing msaadanwaqar@gmail.com</h5>
+    <form action="http://127.0.0.1:8000/contact/" method="post">{% csrf_token %}
+        <div class="form-group ">
+          <label style="color: white;"  for="">Name</label>
+          <input type="text" required name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
+           
+        </div>
+        <div class="form-group">
+            <label style="color: white;" for="">E-Mail</label>
+            <input type="email" required name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+             
+          </div>
+          <div class="form-group">
+            <label style="color: white;" for="">Phone</label>
+            <input type="tel" required name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
+          
+          </div>
+          <div class="form-group">
+            <label style="color: white;" for="">Your's Query</label>
+            <textarea type="text" required name="desc" id="" class="form-control" placeholder="" aria-describedby="helpId"></textarea>
+             
+          </div>
+          <input type="submit" class="btn col-lg-2 btn-outline-info mt-1 mb-1" value="Submit">
+    
+    
+    
+    </form>
+</div>
+
+</div>
+
+
+
+
+
+{% endblock body %}

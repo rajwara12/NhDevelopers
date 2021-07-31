@@ -1,0 +1,148 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+{% load static %}
+<style>
+  body{
+    background-color: #11333F;
+  }
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #11333F;
+  }
+  .img1{
+    width: 100%;
+    height: 100px;
+     
+  }
+  .feat row col{
+    width: 500px ;
+  }
+  .card{
+    width: 350px;
+    margin-left: 2px;
+  }
+   
+}  
+
+
+
+
+
+
+
+  </style>
+<div class="container-fluid m-0   "  >
+    <img src="{% static 'djag.jpg' %}" class="img1" style="width: 100%; height: 440px;" alt="">
+  </div>
+   
+    <!-- <div class="container mt-2">
+        <div class="row "   >
+            <div class="col col-lg-4 " id="col1"  > -->
+              <p style="margin-top:3px; text-align: center;   ">
+                <a  class="col1 btn btn-danger" href="http://127.0.0.1:8000/contact/">Hire Us</a>
+            </div>
+            <!-- <div class="col col-lg-4"id="col2"> -->
+                <a class="col2 btn btn-primary  "  href="http://127.0.0.1:8000/blog/">View Blog  </a>
+            </div>
+            <!-- <div class="col col-lg-4" id="col3"> -->
+                <a class="col  btn btn-success"    href="http://127.0.0.1:8000/about/">About Us</a>
+            </p> 
+            <!-- </div>
+        </div>
+    </div> -->
+
+ 
+ 
+    <div class="container feat" >
+        <h2 class="text-center display-3  mb-3" style="color: white;">Our Features</h2>
+        <div class="row  ">
+            <div class="col col-lg-4 mb-4">
+                <div class="card text-black ">
+                  <img class="card-img-top" src="{% static 'dj3.png' %}" style="width: 100% ; height:200px" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Quality Providers</h4>
+                    <p class="card-text">We provide best quality softwares, management systems, e-commerce sites, blogs and portfolios. Feel free to tell us about your requirements. </p>
+                    <a class="btn btn-danger " href="http://127.0.0.1:8000/contact/">Hire Us</a>
+                </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 mb-4">
+                <div class="card text-black ">
+                  <img class="card-img-top" src="{% static 'm.jpg' %}" style="width: 100% ; height:200px" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Coding Articles</h4>
+                    <p class="card-text">Some of the latest coding information compiled in the form of coding articles. Keep your programming knowledge up to date with these articles.</p>
+                    <a class="btn btn-danger " href="http://127.0.0.1:8000/blog/">Go to Blog</a>
+                </div>
+                </div>
+            </div>
+            <div class="col col-lg-4 mb-4">
+                <div class="card text-black ">
+                  <img class="card-img-top" src="{% static 'dj1.jpg' %}" style="width: 100% ; height:200px" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Free Web Solutions</h4>
+                    <p class="card-text"> You can contact us for any doubt and We will get back to you!. If you want learn something about programming then feel free to contact me.
+
+
+                    </p>
+                    <a class="btn btn-danger" href="http://127.0.0.1:8000/contact/">Contact Us</a>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<hr>
+<div class="container-fluid" style="background-color:#251D1D ; ">
+    <div class="container  mt-3">
+        <h2 class="text-center display-3 " style="color: white; margin-bottom: 10px; ">Our Services </h2>
+            <div class="row " style="color: whitesmoke; margin: 0px;">
+                <div class="col col-lg-4">
+                  <h2 class="text-center" style="margin-bottom: 50px ;">HTML&CSS</h2>
+        
+                </div>
+                <div class="col col-lg-4">
+                    <h2 class="text-center  ">Java Script</h2>
+                    
+                  </div>
+
+                 
+                    <div class="col col-lg-4">
+                        <h2 class="text-center">React</h2>
+                        
+                      </div>
+                      <div class="col col-lg-4">
+                        <h2 class="text-center  " style="margin-bottom: 90px;">Django</h2>
+                  </div>
+                   
+                    <div class="col col-lg-4">
+                        <h2 class="text-center">Management Systems</h2>
+                        
+                      </div>
+                      <div class="col col-lg-4">
+                        <h2 class="text-center mb-4">Portfolios</h2>
+                  </div>
+                   
+                    <div class="col col-lg-4">
+                        <h2 class="text-center" style="margin-bottom: 40px;">Professional Blog</h2>
+                        
+                      </div>
+                      <div class="col col-lg-4">
+                        <h2 class="text-center">WordPress Sites</h2>
+                  </div>
+                  <div class="col col-lg-4">
+                    <h2 class="text-center">E-Commerce Sites</h2>
+              </div>
+                    
+                   
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock body %}
