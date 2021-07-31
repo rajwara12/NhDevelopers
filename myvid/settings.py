@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+ 
 import os 
 from pathlib import Path
 from django.contrib.messages import constants as messages
@@ -146,3 +147,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'msaadanwaqar@gmail.com'
 EMAIL_HOST_PASSWORD= '03030875744'
+
+ 

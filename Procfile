@@ -1,2 +1,2 @@
-web: gunicorn myvid.wsgi  
+web:gunicorn myvid.wsgi --log-file
  
