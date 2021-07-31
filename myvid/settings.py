@@ -33,6 +33,7 @@ ALLOWED_HOSTS =  ["nhdevelopersteam.herokuapp.com","localhost"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'whitenoise.runserver_nostatic',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -130,7 +131,7 @@ STATICFILES_DIRS =   [
     os.path.join(BASE_DIR, "static"),
  
 ]
- 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage' 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
