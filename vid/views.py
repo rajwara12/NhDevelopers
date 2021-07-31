@@ -180,7 +180,7 @@ def contact(request):
     return render(request,'blog/contact.html')  
 
 
-def send_conmail(email  ): 
+def send_conmail(email): 
     subject = 'Thanks for contacting NHDevelopers'
     message =  'We will contact you back soonly with your queries, Stay Blessed' 
     email_from = settings.EMAIL_HOST_USER
