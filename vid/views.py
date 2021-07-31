@@ -101,7 +101,7 @@ def verify(request, auth_token):
 def send_mail_reg(email, token ):
      
     subject = "Thanks for registering at NHDevelopers  Your accounts need to be verified"
-    message = f"Hi, Click here the link to verify your account http://127.0.0.1:8000/{token}"
+    message = f"Hi, Click here the link to verify your account https://nhdevelopersteam.herokuapp.com/{token}"
     email_from = settings.EMAIL_HOST_USER
     recipient_list  = [email]
     send_mail( subject,message,email_from,recipient_list)
@@ -113,7 +113,7 @@ def send_mail_reg(email, token ):
 def send_forget_password_mail(email,token ):
      
     subject = 'Your forget password link'
-    message = f'Hi, Click the link to reset your password http://127.0.0.1:8000/change_pass/{token}' 
+    message = f'Hi, Click the link to reset your password https://nhdevelopersteam.herokuapp.com/change_pass/{token}' 
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)

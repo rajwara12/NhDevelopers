@@ -9,7 +9,7 @@
 <div class="container">
   <h2 class="display-2 text-center">Add Blog Here....</h2>
 
-<form action="http://127.0.0.1:8000/dashboard/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+<form action="https://nhdevelopersteam.herokuapp.com/dashboard/" method="POST" enctype="multipart/form-data">{% csrf_token %}
   <p>Upload Image Here....</p>
   <input type="file" class=" mb-3"  required name="img">
     <div class="form-group">
@@ -39,10 +39,10 @@
           
           <img class="img-fluid "   style="width: 100% ; height:200px"  src= '{{i.img.url}}'    >
           <div class="card-body">
-            <h4 class="card-title"><a href="http://127.0.0.1:8000/dashboard/det/{{i.id}}" style="text-decoration: none; color: black; " >{{i.title}}</h4></a><span>{{i.timestamp}}</span>
+            <h4 class="card-title"><a href="https://nhdevelopersteam.herokuapp.com/dashboard/det/{{i.id}}" style="text-decoration: none; color: black; " >{{i.title}}</h4></a><span>{{i.timestamp}}</span>
             <p class="card-text">{{i.author}}</p>
             <p ><div class="preview">{{i.desc|striptags|slice:':150'  }}</div></p> 
-            <a href="http://127.0.0.1:8000/dashboard/det/{{i.id}}" class="btn btn-primary">View & Update Post </a>
+            <a href="https://nhdevelopersteam.herokuapp.com/dashboard/det/{{i.id}}" class="btn btn-primary">View & Update Post </a>
                 
                  
           </div>

@@ -10,7 +10,7 @@
     <h4>{{blog.author}}</h4>
     <p>{{blog.desc|safe}}</p>
     <div>
-        <form action="http://127.0.0.1:8000/dashboard/det/dele/{{blog.id}}" method="post">{% csrf_token %}
+        <form action="https://nhdevelopersteam.herokuapp.com/dashboard/det/dele/{{blog.id}}" method="post">{% csrf_token %}
             <div class="form-group">
                 <input type="submit" class="btn btn-lg bg-danger" value="Delete">
             </form>
@@ -19,7 +19,7 @@
     <div class="container mt-4">
         <h2 class="text-center">Update your Blog</h2>
 
-        <form action="http://127.0.0.1:8000/dashboard/det/upd/{{blog.id}}" enctype="multipart/form-data" method="post">{% csrf_token %}
+        <form action="https://nhdevelopersteam.herokuapp.com/dashboard/det/upd/{{blog.id}}" enctype="multipart/form-data" method="post">{% csrf_token %}
             <p>Update your Image Here....</p>
   <input type="file" class=" mb-3" required name="img">
             <div class="form-group">
