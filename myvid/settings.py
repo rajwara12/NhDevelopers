@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-itsb$-lmr4y(dx)16@6(o7o!5+=d49u4t80gh6x4icbt4^f@f3'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS =  ['*']
+ALLOWED_HOSTS =  ["nhdevelopersteam.herokuapp.com","localhost"]
 
  
 # Application definition
@@ -130,7 +130,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static", "static-root")
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
@@ -138,7 +138,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static", "media-root")
 MESSAGE_TAGS= {
     messages.ERROR:'danger'
 } 
