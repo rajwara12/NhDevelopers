@@ -9,10 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
- 
-import os 
+
 from pathlib import Path
+
 from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,9 +27,10 @@ SECRET_KEY = 'django-insecure-itsb$-lmr4y(dx)16@6(o7o!5+=d49u4t80gh6x4icbt4^f@f3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS =  ["nhdevelopersteam.herokuapp.com","localhost"]
+ALLOWED_HOSTS = ["nhdevelopersteam.herokuapp.com",
+                 "localhost", "127.0.0.1"]
 
- 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'vid',
-     
-     
 ]
 
 MIDDLEWARE = [
@@ -86,7 +86,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
- 
 
 
 # Password validation
@@ -127,19 +126,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =   [
-    os.path.join(BASE_DIR, "static"),
- 
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, "static"), # you don't need this
+    BASE_DIR / "static",
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage' 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = '/media/'
-MESSAGE_TAGS= {
-    messages.ERROR:'danger'
-} 
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -147,15 +150,10 @@ MESSAGE_TAGS= {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
- 
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'msaadanwaqar@gmail.com'
-EMAIL_HOST_PASSWORD= 'hupxpufcdvsieava'
-
- 
+EMAIL_HOST_PASSWORD = 'hupxpufcdvsieava'
